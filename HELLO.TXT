@@ -1,0 +1,317 @@
+{
+  "_id": {
+    "$oid": "61aa8823682133310e3e278b"
+  },
+  "DomainId": 2,
+  "Asin": "B07L2LZ4LT",
+  "ProductId": "2454166031|Vavabox|B07L2LZ4LT",
+  "TargetPrice": 2.61,
+  "Price": 7.39,
+  "Rank":,
+  "TotalSellers":  "OutOfStockPercentage": 100,
+  "OfferFBA":
+  "OfferFBM":
+  "SalesEstimatedRevenue": 0,
+  "EstimatedSales": 4154,
+  "EstimatedRevenue": 29078,
+  "Categories": [
+    {
+      "$numberLong": "3099640031"
+    },
+    {
+      "$numberLong": "17518302031"
+    }
+  ],
+  "imagesCSV": "41Wp1XjVBiL.jpg,41YuPDGetHL.jpg,51JMIeqgIXL.jpg,41OBccovLIL.jpg,414W+IUXjgL.jpg,51Nu1s6w9qL.jpg,41UO9Mt3DJL.jpg",
+  "csv": null,
+  "manufacturer": null,
+  "title": "Lazy Drawstring Makeup Bags, Large Capacity Waterproof Travel Portable Cosmetic Bag Pouch Makeup Pouch Storage Organiser for Women Girl  (Navy Flamingo)",
+  "lastUpdate":
+  },
+  "lastPriceChange":
+  },
+  "rootCategory":31"
+  },
+  "productType":  "parentAsin": "B082F1NZS5",
+  "variationCSV": "B085RQMXHR,B082DZSHYK,B082GZR312,B082F4NGKD,B07L2LZ4LT",
+  "type": "COSMETIC_CASE",
+  "hasReviews": true,
+  "trackingSince":
+  },
+  "brand": "Vavabox",
+  "productGroup": "Luggage",
+  "partNumber": "vavabox1",
+  "model": null,
+  "color": "Navy Flamingo",
+  "size": "5",
+  "edition": null,
+  "format": null,
+  "packageHeight":
+  "packageLength":,
+  "packageWidth":,
+  "packageWeight":,
+  "packageQuantity":  "isAdultProduct": false,
+  "isEligibleForTradeIn": false,
+  "isEligibleForSuperSaverShipping": false,
+  "offers": null,
+  "buyBoxSellerIdHistory": [],
+  "isRedirectASIN": false,
+  "isSNS": false,
+  "author": null,
+  "binding": null,
+  "numberOfItems":
+  "numberOfPages":
+  "publicationDate":
+  "releaseDate":
+  "languages": [],
+  "lastRatingUpdate":
+  },
+  "ebayListingIds": [],
+  "lastEbayUpdate":  "eanList": [],
+  "upcList": [],
+  "liveOffersOrder": [],
+  "frequentlyBoughtTogether": [
+    "B07HRDVVLS"
+  ],
+  "features": [
+    "★ MATERIALl---Made Of Oxford Canvas, touch this makeup pouches you will feel smooth. Inside the bag there's two zippered pocket which is ideal for keeping little things safe,like jewellery, hair clips and even loose change.",
+    "★ STRUCTURED---You Can Fasten The Velcro from each outer pocket together to folds out to create a mat.Portable drawstring design allows you to pack your items efficiently with style",
+    "★ FEATURRES---This Makeup Travel Bag is collapsible,anti-dirty,waterproof and washable,high capacity ,easy to clean and fast dry.",
+    "★ AS A TRAVEL GIFT&A FREE PACKAGE BAG--- Suitable For Both Home And Travel to organize your personal, household, and travel items. And most important that we will send you a free package bag (not is makeup bag)",
+    "❤️MINI ZIPPER POCKET ---Premium Quality makes it good looking and practical. Attractive color design bring you good mood."
+  ],
+  "description": "Color: Flower,Blue Flamingo,Gold Fox, Navy Flamingo<br> Package Dimension: length=27cm=10.6inch,Width=24cm=9.5inch,Height=2.5cm=0.95inch<br> Package Weight=110g=0.11kg=0.24lb<br><br> Features:<br> *Simply put the velcro from the outer pockets together to create a mat<br> * Perfect not only for women or men but also great for kids as it is compact, practical, drawstring are with high quality and easy to use, and can carry small baby wipes and baby's bottles for the parents among you.<br> * Available on the market combine with the highest level of workmanship, no more harsh chemical smell<br> * Outer and inner use waterproof material, no need to worry the penetration of moisture<br> * High-End design allows this bag when empty to fold very thinly and save lots of room. Cosmetic Pouch For Lazy Ladies",
+  "promotions": [],
+  "newPriceIsMAP": false,
+  "coupon": [],
+  "availabilityAmazon":
+  "listedSince":  "fbaFees": {
+    "storageFee": {
+      "$numberLong": "3"
+    },
+    "storageFeeTax": {
+      "$numberLong": "0"
+    },
+    "pickAndPackFee": {
+      "$numberLong": "221"
+    },
+    "pickAndPackFeeTax": {
+      "$numberLong": "0"
+    }
+  },
+  "variations": [
+    {
+      "asin": "B085RQMXHR",
+      "attributes": [
+        {
+          "dimension": "Color",
+          "value": "All Star"
+        }
+      ]
+    },
+    {
+      "asin": "B082DZSHYK",
+      "attributes": [
+        {
+          "dimension": "Color",
+          "value": "Blue Flamingo"
+        }
+      ]
+    },
+    {
+      "asin": "B082GZR312",
+      "attributes": [
+        {
+          "dimension": "Color",
+          "value": "Flower"
+        }
+      ]
+    },
+    {
+      "asin": "B082F4NGKD",
+      "attributes": [
+        {
+          "dimension": "Color",
+          "value": "Gold Fox"
+        }
+      ]
+    },
+    {
+      "asin": "B07L2LZ4LT",
+      "attributes": [
+        {
+          "dimension": "Color",
+          "value": "Navy Flamingo"
+        }
+      ]
+    }
+  ],
+  "itemHeight":
+  "itemLength":
+  "itemWidth":
+  "itemWeight":
+  "salesRankReference":31"
+  },
+  "salesRanks": {
+    "1769588031": [
+      
+    ],
+    "stockAmazon"
+    "stockBuyBox"
+    "retrievedOfferCount"
+    "totalOfferCount": 
+    "tradeInPrice"
+    "lastOffersUpdate": 
+    "isAddonItem": null,
+    "lightningDealInfo": [ ],
+    "sellerIdsLowestFBA": [],
+    "sellerIdsLowestFBM": [],
+    "offerCountFBA"
+    "offerCountFBM"
+    "salesRankDrops30": 
+    "salesRankDrops90": 
+    "salesRankDrops180":
+    "salesRankDrops365":
+    "buyBoxPrice"
+    "buyBoxShipping"
+    "buyBoxIsUnqualified": null,
+    "buyBoxIsShippable": null,
+    "buyBoxIsPreorder": null,
+    "buyBoxIsFBA": null,
+    "buyBoxIsAmazon": null,
+    "buyBoxIsMAP": null,
+    "buyBoxIsUsed": null,
+    "buyBoxIsBackorder": null,
+    "buyBoxIsPrimeExclusive": null,
+    "buyBoxIsPrimePantry": null,
+    "buyBoxIsPrimeEligible": null,
+    "buyBoxMinOrderQuantity": null,
+    "buyBoxMaxOrderQuantity": null,
+    "buyBoxCondition": null,
+    "buyBoxAvailabilityMessage": null,
+    "buyBoxShippingCountry": null,
+    "buyBoxSellerId": null
+  },
+  "offersSuccessful": false,
+  "categoryTree": [
+    {
+      "catId":
+      "name": "Beauty"
+    },
+    {
+      "catId": 
+      "name": "Tools & Accessories"
+    },
+    {
+      "catId": 
+      "name": "Bags & Cases"
+    },
+    {
+      "catId": {
+      "name": "Cosmetic Bags"
+    }
+  ],
+  "SellerRank": -1,
+  "ProductStatus": 2,
+  "IsCopied": false,
+  "ColorCode": 0
+}
+
+
+
+
+
+
+
+
+
+
+DomainId,
+    Asin,
+    ProductId,
+    TargetPrice,
+    Price,
+    Rank,
+    TotalSellers,
+    OutOfStockPercentage,
+    OfferFBA,
+    OfferFBM,
+    SalesEstimatedRevenue,
+    EstimatedSales,
+    EstimatedRevenue,
+    Categories],
+    imagesCSV,
+    csv,
+    manufacturer,
+    title,
+    lastUpdate,
+    lastPriceChange,
+    rootCategory,
+    productType,
+    parentAsin,
+    variationCSV,
+    type,
+    hasReviews,
+    trackingSince,
+    brand,
+    productGroup,
+    partNumber,
+    model,
+    color,
+    size,
+    edition,
+    format,
+    packageHeight,
+    packageLength,
+    packageWidth,
+    packageWeight,
+    packageQuantity,
+    isAdultProduct,
+    isEligibleForTradeIn,
+    isEligibleForSuperSaverShipping,
+    offers,
+    buyBoxSellerIdHistory
+    isRedirectASIN,
+    isSNS,
+    author,
+    binding,
+    numberOfItems,
+    numberOfPages,
+    publicationDate,
+    releaseDate,
+    languages
+    lastRatingUpdate,
+    ebayListingIds
+    lastEbayUpdate,
+    eanList
+    upcList
+    liveOffersOrder
+    frequentlyBoughtTogether
+    features
+    description,
+    promotions
+    newPriceIsMAP,
+    coupon
+    availabilityAmazon,
+    listedSince,
+    fbaFees,
+    variations
+    itemHeight,
+    itemLength,
+    itemWidth,
+    itemWeight,
+    salesRankReferenceHistory,
+    launchpad,
+    isB2B,
+    stats,
+    offersSuccessful,
+    g,
+    categoryTree{
+        catId,
+        name,
+      },
+    ],
+    SellerRank,
+    ProductStatus,
+    IsCopied,
+    ColorCode,
