@@ -27,23 +27,27 @@ app.use(bodyParser.json());
 
 app.use("/api/amazon", amazonSeller);
 
+
+app.get('/', (req, res) => {
+  res.send('API is running....');
+});
+
+
 // Serve static assets if in production
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 //static folder path
-app.use(express.static(path.resolve(__dirname, "public")));
+// app.use(express.static(path.resolve(__dirname, "public")));
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '/Frontend/build')));
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, '/Frontend/build')));
 
-  app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, 'Frontend', 'build', 'index.html'))
-  );
-} else {
-  app.get('/', (req, res) => {
-    res.send('API is running....');
-  });
-}
+//   app.get('*', (req, res) =>
+//     res.sendFile(path.resolve(__dirname, 'Frontend', 'build', 'index.html'))
+//   );
+// } else {
+ 
+// }
 
 //ERROR HANDLING
 app.use(notFound);
