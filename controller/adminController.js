@@ -54,108 +54,147 @@ export const keepaData = asyncHandler(async (req, res) => {
       "Minimum total sellers value cannot be more than the maximum value."
     );
   }
-  console.log(typeof categoryId, "I am Hear");
+
   let DMId = parseInt(domainId);
   let skipN = parseInt(skip);
-  let proCount;
 
-  let finPro;
-  if (search.length != 0) {
-    proCount = await client
-      .db("upscaleSaaS3")
-      .collection("Products")
-      .countDocuments({
-        brand: search,
-        DomainId: DMId,
-        ColorCode: colorCode,
-        // "categoryTree.$.catId": categoryId,
-      });
-    finPro = await client
-      .db("upscaleSaaS3")
-      .collection("Products")
-      .aggregate([{ $match: { DomainId: DMId,ColorCode: colorCode, brand: { $regex: search } } }])
-      .skip(skipN)
-      .limit(25)
-      .toArray();
+  let proCount = await client
+    .db("upscaleSaaS3")
+    .collection("Products")
+    .countDocuments({
+      DomainId: DMId,
+      ColorCode: colorCode,
+      // "categoryTree.$.catId": categoryId,
+    });
 
-    if (!finPro) {
-      throw new Error("Product is Not There");
-    }
-    console.log(finPro[0], "data.imagesCSVksfjlkj");
-  } else {
-    proCount = await client
-      .db("upscaleSaaS3")
-      .collection("Products")
-      .countDocuments({
-        DomainId: DMId,
-        ColorCode: colorCode,
-        // "categoryTree.$.catId": categoryId,
-      });
-
-    finPro = await client
-      .db("upscaleSaaS3")
-      .collection("Products")
-      .aggregate([
-        {
-          $match: {
-            DomainId: DMId,
-            ColorCode: colorCode,
-            "categoryTree.catId": categoryId,
-          },
+  let finPro = await client
+    .db("upscaleSaaS3")
+    .collection("Products")
+    .aggregate([
+      {
+        $match: {
+          DomainId: DMId,
+          ColorCode: colorCode,
+          "categoryTree.catId": categoryId,
         },
-      ])
-      .skip(skipN)
-      .limit(25)
-      .toArray();
-  }
+      },
+    ])
+    .skip(skipN)
+    .limit(25)
+    .toArray();
 
-  let productResearchViewModel = finPro.map((data) => {
-    const image = data.imagesCSV != null && data.imagesCSV.split(",");
-    return {
-      amazonURL: `https://www.amazon.co.uk/dp/${data.Asin}?Psc=1`,
-      asin: data.Asin,
-      brand: data.brand,
-      colorCode: data.ColorCode,
-      ean: data.eanList,
-      estimatedRevenue: data.EstimatedRevenue,
-      estimatedSales: data.EstimatedSales,
-      image: `https://images-na.ssl-images-amazon.com/images/I/${image[0]}`,
-      offerFBA: data.OfferFBA,
-      offerFBM: data.OfferFBM,
-      outOfStockPercentage: data.OutOfStockPercentage,
-      price: data.TargetPrice,
-      rank: data.Rank,
-      targetPrice: data.TargetPrice,
-      upc: data.upcList,
-      productId: data.ProductId,
-      totalSellers: data.TotalSellers,
-      manufacturer: data.manufacturer,
-      title: data.title,
-      lastUpdate: data.lastUpdate,
-      lastPriceChange: data.lastPriceChange,
-      rootCategory: data.rootCategory,
-      type: data.type,
-      trackingSince: data.trackingSince,
-      productGroup: data.productGroup,
-      partNumber: data.partNumber,
-      model: data.model,
-      packageHeight: data.packageHeight,
-      packageLength: data.packageLength,
-      packageWidth: data.packageWidth,
-      packageWeight: data.packageWeight,
-      packageQuantity: data.packageQuantity,
-      isAdultProduct: data.isAdultProduct,
-      buyBoxSellerIdHistory: data.buyBoxSellerIdHistory,
-      binding: data.binding,
-      releaseDate: data.releaseDate,
-      lastRatingUpdate: data.lastRatingUpdate,
-      lastEbayUpdate: data.lastEbayUpdate,
-      features: data.features,
-      description: data.description,
-      availabilityAmazon: data.availabilityAmazon,
-      listedSince: data.listedSince,
-    };
-  });
+  let productResearchViewModel;
+
+  if (search.length != 0) {
+    let productFilter = finPro.filter((data) => {
+      let text =
+        data.brand && data.brand !== null && data.brand.includes(search);
+      console.log(text, "searchsearchsearchsearch");
+      if (text !== false && text !== null)
+        return {
+          amazonURL: `https://www.amazon.co.uk/dp/${data.Asin}?Psc=1`,
+          asin: data.Asin,
+          brand: data.brand,
+          colorCode: data.ColorCode,
+        };
+    });
+
+    productResearchViewModel = productFilter.map((data) => {
+      const image = data.imagesCSV != null && data.imagesCSV.split(",");
+      return {
+        amazonURL: `https://www.amazon.co.uk/dp/${data.Asin}?Psc=1`,
+        asin: data.Asin,
+        brand: data.brand,
+        colorCode: data.ColorCode,
+        ean: data.eanList,
+        estimatedRevenue: data.EstimatedRevenue,
+        estimatedSales: data.EstimatedSales,
+        image: `https://images-na.ssl-images-amazon.com/images/I/${image[0]}`,
+        offerFBA: data.OfferFBA,
+        offerFBM: data.OfferFBM,
+        outOfStockPercentage: data.OutOfStockPercentage,
+        price: data.TargetPrice,
+        rank: data.Rank,
+        targetPrice: data.TargetPrice,
+        upc: data.upcList,
+        productId: data.ProductId,
+        totalSellers: data.TotalSellers,
+        manufacturer: data.manufacturer,
+        title: data.title,
+        lastUpdate: data.lastUpdate,
+        lastPriceChange: data.lastPriceChange,
+        rootCategory: data.rootCategory,
+        type: data.type,
+        trackingSince: data.trackingSince,
+        productGroup: data.productGroup,
+        partNumber: data.partNumber,
+        model: data.model,
+        packageHeight: data.packageHeight,
+        packageLength: data.packageLength,
+        packageWidth: data.packageWidth,
+        packageWeight: data.packageWeight,
+        packageQuantity: data.packageQuantity,
+        isAdultProduct: data.isAdultProduct,
+        buyBoxSellerIdHistory: data.buyBoxSellerIdHistory,
+        binding: data.binding,
+        releaseDate: data.releaseDate,
+        lastRatingUpdate: data.lastRatingUpdate,
+        lastEbayUpdate: data.lastEbayUpdate,
+        features: data.features,
+        description: data.description,
+        availabilityAmazon: data.availabilityAmazon,
+        listedSince: data.listedSince,
+      };
+    });
+  } else {
+    productResearchViewModel = finPro.map((data) => {
+      const image = data.imagesCSV != null && data.imagesCSV.split(",");
+      return {
+        amazonURL: `https://www.amazon.co.uk/dp/${data.Asin}?Psc=1`,
+        asin: data.Asin,
+        brand: data.brand,
+        colorCode: data.ColorCode,
+        ean: data.eanList,
+        estimatedRevenue: data.EstimatedRevenue,
+        estimatedSales: data.EstimatedSales,
+        image: `https://images-na.ssl-images-amazon.com/images/I/${image[0]}`,
+        offerFBA: data.OfferFBA,
+        offerFBM: data.OfferFBM,
+        outOfStockPercentage: data.OutOfStockPercentage,
+        price: data.TargetPrice,
+        rank: data.Rank,
+        targetPrice: data.TargetPrice,
+        upc: data.upcList,
+        productId: data.ProductId,
+        totalSellers: data.TotalSellers,
+        manufacturer: data.manufacturer,
+        title: data.title,
+        lastUpdate: data.lastUpdate,
+        lastPriceChange: data.lastPriceChange,
+        rootCategory: data.rootCategory,
+        type: data.type,
+        trackingSince: data.trackingSince,
+        productGroup: data.productGroup,
+        partNumber: data.partNumber,
+        model: data.model,
+        packageHeight: data.packageHeight,
+        packageLength: data.packageLength,
+        packageWidth: data.packageWidth,
+        packageWeight: data.packageWeight,
+        packageQuantity: data.packageQuantity,
+        isAdultProduct: data.isAdultProduct,
+        buyBoxSellerIdHistory: data.buyBoxSellerIdHistory,
+        binding: data.binding,
+        releaseDate: data.releaseDate,
+        lastRatingUpdate: data.lastRatingUpdate,
+        lastEbayUpdate: data.lastEbayUpdate,
+        features: data.features,
+        description: data.description,
+        availabilityAmazon: data.availabilityAmazon,
+        listedSince: data.listedSince,
+      };
+    });
+  }
 
   // ascending
   if (sortDirection === "asc") {
